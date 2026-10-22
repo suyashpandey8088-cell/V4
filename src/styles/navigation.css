@@ -1,0 +1,71 @@
+.scroll-progress { position: fixed; z-index: 1200; top: 0; right: 0; left: 0; height: 2px; background: rgba(242,239,234,.1); }
+.scroll-progress__bar { width: 100%; height: 100%; background: var(--ducati-red); box-shadow: 0 0 12px rgba(213,0,28,.7); transform: scaleX(0); transform-origin: left; }
+
+.navigation {
+  position: fixed;
+  z-index: 100;
+  top: 2px;
+  right: 0;
+  left: 0;
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--page-gutter);
+  background: linear-gradient(to bottom, rgba(9,9,9,.82), rgba(9,9,9,.18), transparent);
+}
+.navigation__brand { display: inline-flex; }
+.brand-mark { display: inline-flex; align-items: center; gap: .65rem; color: var(--ducati-red); }
+.brand-mark__shield { width: 2rem; height: 2.35rem; flex: none; }
+.brand-mark__type { display: flex; flex-direction: column; gap: .05rem; }
+.brand-mark__type strong { color: var(--bone); font-family: var(--font-display); font-size: 1.4rem; font-weight: 400; letter-spacing: .06em; line-height: 1; }
+.brand-mark__type small { color: var(--titanium); font-family: var(--font-mono); font-size: .43rem; letter-spacing: .12em; }
+.navigation__concept { position: absolute; left: 50%; display: flex; align-items: center; gap: .8rem; color: var(--titanium); transform: translateX(-50%); white-space: nowrap; }
+.navigation__concept i { width: 2rem; height: 1px; background: var(--ducati-red); }
+.navigation__actions { display: flex; align-items: center; gap: .5rem; }
+.navigation__chapter-button { height: 2.75rem; display: flex; align-items: center; gap: .65rem; padding: 0 .85rem; border: 1px solid rgba(242,239,234,.16); background: rgba(9,9,9,.25); font-family: var(--font-mono); font-size: .55rem; letter-spacing: .1em; }
+.navigation__chapter-button strong { color: var(--ducati-red); font-size: .75rem; }
+.navigation__chapter-chevron { color: var(--titanium); }
+.icon-button, .menu-button { min-width: 2.75rem; height: 2.75rem; background: rgba(9,9,9,.25); }
+.icon-button { display: flex; align-items: center; justify-content: center; gap: .25rem; padding: 0 .65rem; border: 1px solid rgba(242,239,234,.16); }
+.icon-button svg { width: 1.15rem; height: 1.15rem; }
+.sound-toggle__label { font-family: var(--font-mono); font-size: .48rem; }
+.sound-toggle.is-active { color: var(--ducati-red); border-color: rgba(213,0,28,.6); }
+.menu-button { display: flex; align-items: center; gap: .65rem; padding: 0 .8rem; }
+.menu-button__label { font-family: var(--font-mono); font-size: .56rem; letter-spacing: .1em; }
+.menu-button__lines { width: 1.15rem; display: flex; flex-direction: column; gap: .32rem; }
+.menu-button__lines i { display: block; width: 100%; height: 1px; background: var(--bone); }
+.menu-button__lines i:last-child { width: 65%; margin-left: auto; background: var(--ducati-red); }
+.navigation button:hover { border-color: rgba(213,0,28,.75); }
+
+.chapter-status { position: fixed; z-index: 90; bottom: 1.4rem; left: var(--page-gutter); display: flex; align-items: center; gap: .8rem; pointer-events: none; color: var(--bone); font-family: var(--font-mono); font-size: .55rem; letter-spacing: .09em; text-transform: uppercase; text-shadow: 0 1px 8px #090909; }
+.chapter-status__count { color: var(--bone); font-weight: 500; }
+.chapter-status__count i { color: var(--ducati-red); font-style: normal; }
+.chapter-status__rule { width: 2.5rem; height: 1px; background: var(--ducati-red); }
+.chapter-status__title { color: var(--titanium); }
+.edge-index { position: fixed; z-index: 85; right: .75rem; bottom: 7rem; color: var(--titanium); font-size: .48rem; writing-mode: vertical-rl; text-shadow: 0 1px 6px #090909; }
+
+.chapter-menu { position: fixed; z-index: 1000; inset: 0; overflow-y: auto; padding: 1.5rem var(--page-gutter); color: var(--bone); background: rgba(9,9,9,.985); }
+.chapter-menu::before { content: ''; position: fixed; inset: 0 62% 0 0; pointer-events: none; background: linear-gradient(135deg, rgba(213,0,28,.35), transparent 65%); }
+.chapter-menu__top, .chapter-menu__footer { position: relative; display: flex; align-items: center; justify-content: space-between; gap: 1rem; color: var(--titanium); }
+.chapter-menu__close { display: flex; align-items: center; gap: .75rem; padding: .5rem; background: transparent; font-family: var(--font-mono); font-size: .6rem; letter-spacing: .1em; }
+.chapter-menu__close i { color: var(--ducati-red); font-family: var(--font-body); font-size: 1.8rem; font-style: normal; line-height: 1; }
+.chapter-menu__body { position: relative; display: grid; grid-template-columns: .8fr 1.2fr; gap: 6vw; align-items: center; min-height: calc(100svh - 8rem); padding: 2rem 0; }
+.chapter-menu__intro { position: relative; }
+.chapter-menu__ghost { position: absolute; top: 50%; left: -5vw; z-index: -1; color: rgba(213,0,28,.11); font-family: var(--font-display); font-size: 32vw; line-height: 1; transform: translateY(-50%); }
+.chapter-menu__intro h2 { margin: 1rem 0 1.5rem; font-size: clamp(3.4rem, 6.5vw, 7rem); line-height: .9; }
+.chapter-menu__note { max-width: 25rem; color: var(--titanium); font-size: .8rem; line-height: 1.7; }
+.chapter-menu__list { border-top: 1px solid var(--hairline); }
+.chapter-menu__list button { width: 100%; min-height: 4.5rem; display: grid; grid-template-columns: 2.5rem 1fr 2rem; align-items: center; gap: 1rem; padding: 0 .5rem; border-bottom: 1px solid var(--hairline); background: transparent; text-align: left; transition: background 160ms, padding 160ms; }
+.chapter-menu__list button:hover, .chapter-menu__list button.is-current { padding-left: 1rem; background: rgba(213,0,28,.1); }
+.chapter-menu__number { color: var(--ducati-red); font-family: var(--font-mono); font-size: .65rem; }
+.chapter-menu__title { font-family: var(--font-display); font-size: clamp(1.35rem, 2.3vw, 2.5rem); text-transform: uppercase; }
+.chapter-menu__arrow { color: var(--titanium); font-size: 1.2rem; }
+.chapter-menu__list button.is-current .chapter-menu__arrow { color: var(--ducati-red); }
+.chapter-menu__footer { padding-top: 1rem; border-top: 1px solid var(--hairline); font-size: .5rem; }
+
+.scroll-prompt { display: flex; flex-direction: column; align-items: center; gap: .6rem; color: var(--titanium); font-family: var(--font-mono); font-size: .52rem; letter-spacing: .12em; text-transform: uppercase; }
+.scroll-prompt__track { position: relative; width: 1px; height: 2.8rem; overflow: hidden; background: rgba(242,239,234,.2); }
+.scroll-prompt__track i { position: absolute; inset: 0; background: var(--ducati-red); animation: scroll-line 1.8s ease-in-out infinite; transform-origin: top; }
+.scroll-prompt__arrow { color: var(--ducati-red); }
+@keyframes scroll-line { 0% { transform: translateY(-100%); } 55%, 100% { transform: translateY(100%); } }

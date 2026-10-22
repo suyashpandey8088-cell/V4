@@ -1,0 +1,186 @@
+@media (max-width: 1100px) {
+  .navigation__concept { display: none; }
+  .hero-scene__headline { font-size: 7.6vw; }
+  .hero-scene__intro { top: 39%; }
+  .design-scene__headline { font-size: 10.2vw; }
+  .design-scene__annotation--3, .design-scene__annotation--4 { bottom: 17%; }
+  .engine-stat__number { font-size: 7.4vw; }
+  .engine-scene__configuration { max-width: 12rem; }
+  .engine-scene__configuration p { font-size: .55rem; }
+  .engine-scene__source span:nth-child(2) { display: none; }
+  .racing-scene__details { width: 9rem; }
+  .racing-scene__detail { height: 6.5rem; }
+  .cockpit-scene__interface { width: 59vw; grid-template-columns: 1.35fr .8fr; }
+  .cockpit-scene__display-main strong { font-size: 1.05rem; }
+  .final-scene__actions { flex-direction: column; }
+  .final-scene__model { bottom: 29%; }
+  .final-scene__secondary { bottom: 6%; }
+}
+
+@media (max-width: 700px) {
+  :root { --page-gutter: 1.15rem; --header-height: 4.25rem; }
+  .microcopy { font-size: .55rem; }
+  .scene-pin, .scene-sticky { min-height: 32rem; }
+  .site-grain { opacity: .035; }
+  .cursor, .edge-index { display: none; }
+  .navigation { padding-right: .75rem; }
+  .navigation__chapter-button { display: none; }
+  .brand-mark { gap: .45rem; }
+  .brand-mark__shield { width: 1.65rem; height: 1.9rem; }
+  .brand-mark__type strong { font-size: 1.15rem; }
+  .brand-mark__type small { font-size: .36rem; }
+  .navigation__actions { gap: .15rem; }
+  .icon-button, .menu-button { min-width: 2.75rem; height: 2.75rem; }
+  .menu-button__label, .sound-toggle__label { display: none; }
+  .chapter-status { right: var(--page-gutter); bottom: .85rem; gap: .5rem; font-size: .45rem; }
+  .chapter-status__rule { width: 1.25rem; }
+  .chapter-status__title { max-width: 11rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .preloader { padding-top: 1.25rem; padding-bottom: 1.25rem; }
+  .preloader__top span:last-child { display: none; }
+  .preloader__title { font-size: 18vw; }
+  .preloader__index { font-size: 85vw; }
+  .preloader__meta { font-size: .48rem; }
+  .chapter-menu { padding-top: 1rem; }
+  .chapter-menu__body { display: block; min-height: 0; padding: 3rem 0 2rem; }
+  .chapter-menu__intro h2 { margin: .65rem 0 1rem; font-size: 12vw; }
+  .chapter-menu__note { display: none; }
+  .chapter-menu__ghost { top: 0; left: 45%; font-size: 65vw; transform: none; }
+  .chapter-menu__list { margin-top: 2rem; }
+  .chapter-menu__list button { min-height: 3.75rem; grid-template-columns: 1.8rem 1fr 1.2rem; gap: .5rem; }
+  .chapter-menu__title { font-size: 1.35rem; }
+  .chapter-menu__footer { padding-bottom: 1rem; font-size: .4rem; }
+  .chapter-menu__footer span:last-child { display: none; }
+  .chapter-label { gap: .55rem; font-size: .5rem; }
+  .chapter-label__number { font-size: 1.25rem; }
+  .chapter-label__line { width: 1.4rem; }
+  .hero-scene__topline > .microcopy,
+  .design-scene__topline > .microcopy,
+  .exploded-scene__topline > .microcopy,
+  .engine-scene__topline > .microcopy,
+  .aero-scene__topline > .microcopy,
+  .racing-scene__topline > .microcopy,
+  .cockpit-scene__topline > .microcopy,
+  .final-scene__topline > .microcopy { display: none; }
+
+  /* Mobile compositions are deliberately reframed, not scaled-down desktop scenes. */
+  .hero-scene__grid { background-size: 3rem 3rem; }
+  .hero-scene__red-aura { top: 22%; left: 0; width: 100%; height: 60%; }
+  .hero-scene__beam { top: 31%; left: 0; width: 120%; }
+  .hero-scene__giant { top: 35%; left: -18vw; font-size: 39vw; }
+  .hero-scene__bike { inset: 24% -38% 20%; }
+  .hero-scene__headline { top: 17%; font-size: 10.8vw; line-height: .9; }
+  .hero-scene__headline-mask--second { font-size: 1.15em; }
+  .hero-scene__intro { top: auto; right: auto; bottom: 15%; left: var(--page-gutter); font-size: .55rem; }
+  .hero-scene__sidecode, .hero-scene__dial, .hero-scene__footer { display: none; }
+  .hero-scene__prompt { right: var(--page-gutter); bottom: 4rem; }
+
+  .design-scene__headline { top: 18%; left: -1vw; font-size: 14vw; line-height: .86; white-space: normal; }
+  .design-scene__background-word { right: -30vw; bottom: 2%; font-size: 80vw; }
+  .design-scene__bike { inset: 35% -30% 22%; }
+  .design-scene__wire { display: none; }
+  .technical-annotation { font-size: .43rem; }
+  .technical-annotation__rule { width: 1.5rem; }
+  .design-scene__annotation--1 { top: 52%; left: 3%; }
+  .design-scene__annotation--2 { top: auto; right: 3%; bottom: 27%; }
+  .design-scene__annotation--3, .design-scene__annotation--4 { display: none; }
+  .design-scene__statement { right: var(--page-gutter); bottom: 10%; font-size: 8.5vw; }
+  .design-scene__footer { bottom: 3.2rem; font-size: .4rem; }
+
+  .exploded-scene__chapter-ghost { top: 18%; font-size: 70vw; }
+  .exploded-scene__title { top: 17%; height: 5em; font-size: 10.5vw; }
+  .exploded-bike, .exploded-scene__guides { top: 53%; width: 142vw; }
+  .exploded-scene__labels { display: none; }
+  .exploded-scene__status { bottom: 5.5rem; gap: .35rem; font-size: .37rem; }
+  .exploded-scene__status i { width: .7rem; }
+  .exploded-scene__disclaimer { right: var(--page-gutter); bottom: 3.3rem; left: var(--page-gutter); max-width: none; font-size: .36rem; text-align: left; }
+
+  .engine-scene__title { top: 16%; font-size: 10.6vw; }
+  .engine-scene__core { top: 43%; left: 50%; width: 88vw; }
+  .engine-scene__orbit { top: 43%; left: 50%; width: 96vw; }
+  .engine-scene__heat { top: 22%; left: 5%; width: 90%; height: 45%; }
+  .engine-scene__core-label { font-size: .36rem; }
+  .engine-scene__complete-bike { inset: 28% -32% 26%; }
+  .engine-scene__configuration { top: 31%; left: var(--page-gutter); max-width: 8rem; }
+  .engine-scene__configuration strong { font-size: 7vw; }
+  .engine-scene__configuration p, .engine-scene__gearbox { display: none; }
+  .engine-scene__stats { top: auto; right: var(--page-gutter); bottom: 9%; left: var(--page-gutter); display: grid; grid-template-columns: 1fr 1fr; gap: .5rem 1rem; }
+  .engine-stat { position: static; }
+  .engine-stat__number { font-size: 11vw; }
+  .engine-stat__unit { font-size: 3.4vw; }
+  .engine-stat__label, .engine-stat__detail { font-size: .36rem; }
+  .engine-scene__assembled { bottom: 30%; font-size: 7vw; }
+  .engine-scene__source { bottom: 3rem; font-size: .34rem; }
+  .engine-scene__source span:first-child { max-width: 55%; }
+
+  .aero-scene, .racing-scene, .cockpit-scene { height: 190svh; }
+  .aero-scene__title, .racing-scene__title, .cockpit-scene__title { top: 16%; font-size: 10.5vw; }
+  .aero-scene__tunnel { opacity: .18; }
+  .aero-scene__bike { inset: 30% -30% 22%; }
+  .aero-scene__airflow { inset: 24% -30% 18%; width: 160%; }
+  .aero-scene__statement { top: 53%; font-size: 14vw; white-space: normal; }
+  .aero-scene__brake { top: 43%; right: 5%; width: 9rem; }
+  .aero-scene__brake .bike-image { height: 9rem; }
+  .aero-scene__brake strong { font-size: 1.7rem; }
+  .aero-scene__brake span { font-size: .36rem; }
+  .aero-scene__footer { bottom: 3.2rem; font-size: .36rem; }
+  .aero-scene__footer span:last-child { display: none; }
+
+  .racing-scene__ghost { top: 22%; font-size: 75vw; }
+  .racing-scene__track-line { top: 28%; right: -25%; width: 100vw; height: 48vh; }
+  .racing-scene__bike { inset: 30% -31% 21%; }
+  .racing-scene__telemetry { top: auto; bottom: 12%; left: var(--page-gutter); width: 10rem; }
+  .racing-scene__telemetry-item { padding: .3rem 0; }
+  .racing-scene__telemetry-item:nth-child(n+3) { display: none; }
+  .racing-scene__telemetry small { font-size: .32rem; }
+  .racing-scene__details { display: none; }
+  .racing-scene__signoff { bottom: 13%; font-size: 9vw; text-align: right; }
+  .racing-scene__footer { bottom: 3.2rem; font-size: .35rem; }
+  .racing-scene__footer span:last-child { display: none; }
+
+  .cockpit-scene__camera { inset: 10% -45% 5% -15%; }
+  .cockpit-scene__camera::after { background: linear-gradient(180deg, rgba(9,9,9,.85), rgba(9,9,9,.15) 40%, rgba(9,9,9,.9) 78%); }
+  .cockpit-scene__interface { top: 34%; right: var(--page-gutter); left: var(--page-gutter); width: auto; grid-template-columns: 1fr; gap: .55rem; }
+  .cockpit-scene__display { min-height: 11.5rem; }
+  .cockpit-scene__display-main { padding: .75rem; }
+  .cockpit-scene__display-main strong { font-size: 1rem; }
+  .cockpit-scene__display-main p { margin-top: .4rem; font-size: .52rem; line-height: 1.45; }
+  .cockpit-scene__display-top, .cockpit-scene__display-footer { padding: .45rem .6rem; font-size: .34rem; }
+  .cockpit-scene__systems { display: grid; grid-template-columns: 1fr 1fr; gap: .35rem; }
+  .cockpit-scene__systems button { min-height: 2.75rem; }
+  .cockpit-scene__display-stat { bottom: 13%; gap: .6rem; }
+  .cockpit-scene__display-stat strong { font-size: 12vw; }
+  .cockpit-scene__display-stat span { font-size: .35rem; }
+  .cockpit-scene__source { bottom: 3rem; font-size: .33rem; }
+  .cockpit-scene__source span { max-width: 58%; }
+
+  .final-scene__halo { top: 24%; left: 5%; width: 100vw; }
+  .final-scene__ghost { top: 22%; font-size: 90vw; }
+  .final-scene__bike { inset: 26% -30% 27%; }
+  .final-scene__title { top: 17%; font-size: 16.5vw; }
+  .final-scene__model { bottom: 29%; }
+  .final-scene__model > span { font-size: .48rem; }
+  .final-scene__model p { font-size: .6rem; }
+  .final-scene__actions { right: var(--page-gutter); bottom: 10.5%; flex-direction: column; gap: .4rem; }
+  .final-scene__actions .button { min-height: 2.9rem; font-size: .56rem; }
+  .final-scene__secondary { right: var(--page-gutter); bottom: 3.5rem; left: var(--page-gutter); justify-content: flex-start; font-size: .42rem; }
+  .final-scene__signoff { display: none; }
+  .footer { grid-template-columns: 1fr; gap: 1.5rem; padding-top: 2.5rem; padding-bottom: 5rem; }
+  .footer__links { align-items: flex-start; }
+
+  .reduced-motion .aero-scene__statements { bottom: 13%; flex-direction: column; gap: .15rem; }
+  .reduced-motion .aero-scene__statement { font-size: 6vw; text-align: left; }
+  .reduced-motion .aero-scene__brake { display: none; }
+}
+
+@media (max-height: 650px) and (min-width: 701px) {
+  .hero-scene__headline, .design-scene__headline { top: 20%; }
+  .engine-scene__title, .aero-scene__title, .racing-scene__title, .cockpit-scene__title, .final-scene__title { top: 19%; }
+  .engine-scene__core { width: min(35vw, 28rem); }
+  .engine-scene__orbit { width: min(40vw, 32rem); }
+  .cockpit-scene__interface { top: 30%; }
+  .cockpit-scene__display { min-height: 13rem; }
+}
+
+@media (pointer: coarse) {
+  .cursor { display: none; }
+}

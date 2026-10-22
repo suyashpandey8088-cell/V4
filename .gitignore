@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.vite/
+.venv/
+image-search/
+playwright-report/
+test-results/
+*.local
+*.tsbuildinfo
+.DS_Store
+.vercel/

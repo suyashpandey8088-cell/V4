@@ -1,0 +1,137 @@
+.hero-scene__topline,
+.design-scene__topline,
+.exploded-scene__topline,
+.engine-scene__topline,
+.aero-scene__topline,
+.racing-scene__topline,
+.cockpit-scene__topline,
+.final-scene__topline {
+  position: absolute;
+  z-index: 12;
+  top: calc(var(--header-height) + 1.35rem);
+  right: var(--page-gutter);
+  left: var(--page-gutter);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.hero-scene__topline > .microcopy,
+.design-scene__topline > .microcopy,
+.exploded-scene__topline > .microcopy,
+.engine-scene__topline > .microcopy,
+.aero-scene__topline > .microcopy,
+.racing-scene__topline > .microcopy,
+.cockpit-scene__topline > .microcopy,
+.final-scene__topline > .microcopy { color: var(--titanium); font-size: .52rem; }
+
+/* 01 — The Awakening */
+.hero-scene { color: var(--bone); background: var(--obsidian); }
+.hero-scene__pin { background: radial-gradient(circle at 63% 48%, #151212 0, var(--obsidian) 52%); }
+.hero-scene__grid { position: absolute; inset: 0; opacity: .42; mask-image: linear-gradient(to bottom, black, transparent 80%); }
+.hero-scene__red-aura { position: absolute; top: 10%; left: 30%; width: 70%; height: 85%; background: radial-gradient(ellipse, rgba(213,0,28,.34), rgba(213,0,28,.06) 42%, transparent 70%); filter: blur(25px); }
+.hero-scene__beam { position: absolute; z-index: 1; top: 20%; left: 25%; width: 85%; height: 48%; background: linear-gradient(104deg, transparent 12%, rgba(213,0,28,.03) 30%, rgba(255,50,70,.24) 50%, rgba(213,0,28,.03) 64%, transparent 82%); clip-path: polygon(0 46%, 100% 0, 100% 55%, 0 61%); transform-origin: left; filter: blur(8px); }
+.hero-scene__giant { position: absolute; z-index: 1; top: 25%; left: -7vw; color: transparent; font-family: var(--font-display); font-size: 20.5vw; line-height: 1; white-space: nowrap; -webkit-text-stroke: 1px rgba(242,239,234,.14); }
+.hero-scene__bike { position: absolute; z-index: 2; inset: 9% -3% 5%; transform-origin: 55% 55%; }
+.hero-scene__bike > .bike-image { position: absolute; inset: 0; }
+.hero-scene__side { opacity: 0; }
+.hero-scene__headline { position: absolute; z-index: 5; top: 19%; left: var(--page-gutter); font-size: clamp(3.8rem, 6.8vw, 8.2rem); line-height: .86; letter-spacing: -.025em; pointer-events: none; }
+.hero-scene__headline-mask { display: block; padding-bottom: .06em; overflow: hidden; white-space: nowrap; }
+.hero-scene__headline-mask--second { margin-top: .08em; font-size: 1.17em; }
+.hero-scene__headline-mask--second > span { display: inline-block; }
+.hero-scene__accent { color: var(--ducati-red); }
+.hero-scene__intro { position: absolute; z-index: 5; top: 21%; right: var(--page-gutter); padding-left: 1rem; border-left: 1px solid var(--ducati-red); color: var(--titanium); font-size: .72rem; line-height: 1.7; text-transform: uppercase; }
+.hero-scene__sidecode { position: absolute; z-index: 4; top: 48%; left: 1rem; color: var(--titanium); font-size: .48rem; writing-mode: vertical-rl; transform: rotate(180deg); }
+.hero-scene__prompt { position: absolute; z-index: 8; right: var(--page-gutter); bottom: 4rem; }
+.hero-scene__footer { position: absolute; z-index: 5; right: var(--page-gutter); bottom: 4.4rem; left: var(--page-gutter); display: flex; justify-content: space-between; padding-right: 6rem; color: var(--titanium); font-size: .48rem; }
+.technical-dial { position: absolute; z-index: 1; right: 8%; bottom: 15%; width: 9rem; height: 9rem; border: 1px solid rgba(167,169,172,.22); border-radius: 50%; }
+.technical-dial::before, .technical-dial::after { content: ''; position: absolute; inset: 12%; border: 1px dashed rgba(213,0,28,.4); border-radius: inherit; }
+.technical-dial::after { inset: 46%; border-style: solid; background: var(--ducati-red); }
+.technical-dial i { position: absolute; top: 50%; left: -10%; width: 120%; height: 1px; background: rgba(167,169,172,.18); }
+.technical-dial i:nth-child(2) { transform: rotate(90deg); }
+.technical-dial span { position: absolute; top: 48%; left: 105%; color: var(--titanium); font-family: var(--font-mono); font-size: .5rem; }
+
+/* 02 — Form meets function */
+.design-scene { color: var(--obsidian); background: var(--ducati-red); }
+.design-scene__pin { background: radial-gradient(circle at 60% 48%, #ed0928 0, var(--ducati-red) 40%, #920014 115%); }
+.design-scene__texture { position: absolute; inset: 0; background: linear-gradient(118deg, rgba(9,9,9,.13) 0 1px, transparent 1px 12%), linear-gradient(90deg, transparent 65%, rgba(9,9,9,.12)); background-size: 13px 13px, 100% 100%; mix-blend-mode: multiply; }
+.design-scene__background-word { position: absolute; right: -8vw; bottom: -14vw; color: rgba(9,9,9,.09); font-family: var(--font-display); font-size: 41vw; line-height: 1; }
+.design-scene__headline { position: absolute; z-index: 1; top: 19%; left: -1.5vw; font-size: 9.2vw; line-height: .82; letter-spacing: -.035em; white-space: nowrap; }
+.design-scene__headline span { color: var(--bone); }
+.design-scene__bike { position: absolute; z-index: 2; inset: 27% -8% 9% -5%; transform-origin: center; filter: drop-shadow(0 2.5rem 2rem rgba(9,9,9,.34)); }
+.design-scene__bike .bike-image { object-fit: contain; }
+.design-scene__wire { position: absolute; z-index: 4; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+.design-scene__wire path { fill: none; stroke: rgba(242,239,234,.75); stroke-width: 1; stroke-dasharray: 1; vector-effect: non-scaling-stroke; }
+.design-scene__annotation--1 { top: 49%; left: 7%; }
+.design-scene__annotation--2 { top: 35%; right: 5%; }
+.design-scene__annotation--3 { bottom: 21%; left: 8%; }
+.design-scene__annotation--4 { right: 5%; bottom: 22%; }
+.design-scene__statement { position: absolute; z-index: 5; right: var(--page-gutter); bottom: 9%; color: var(--bone); font-family: var(--font-display); font-size: 3.4vw; line-height: .9; text-align: right; }
+.design-scene__footer { position: absolute; z-index: 5; right: var(--page-gutter); bottom: 3.5rem; left: var(--page-gutter); display: flex; justify-content: space-between; color: rgba(242,239,234,.75); }
+
+/* 03 — Anatomy */
+.exploded-scene { color: var(--bone); background: var(--obsidian); }
+.exploded-scene__pin { background-image: linear-gradient(rgba(167,169,172,.045) 1px, transparent 1px), linear-gradient(90deg, rgba(167,169,172,.045) 1px, transparent 1px), radial-gradient(circle at 55% 55%, #1b1b1b, var(--obsidian) 65%); background-size: 4rem 4rem, 4rem 4rem, 100% 100%; }
+.exploded-scene__metal { position: absolute; inset: 0; opacity: .35; background: repeating-linear-gradient(102deg, transparent 0 4px, rgba(255,255,255,.012) 5px, transparent 6px 11px); }
+.exploded-scene__chapter-ghost { position: absolute; top: 5%; right: -2vw; color: transparent; font-family: var(--font-display); font-size: 32vw; line-height: 1; -webkit-text-stroke: 1px rgba(167,169,172,.08); }
+.exploded-scene__title { position: absolute; z-index: 5; top: 18%; right: var(--page-gutter); left: var(--page-gutter); height: 7em; font-size: 5.4vw; line-height: .87; pointer-events: none; }
+.exploded-scene__title > span { position: absolute; top: 0; left: 0; }
+.exploded-scene__title--purpose { color: var(--ducati-red); opacity: 0; }
+.exploded-bike { position: absolute; z-index: 3; top: 56%; left: 50%; width: min(85vw, 76rem); aspect-ratio: 1650 / 865; translate: -50% -50%; }
+.exploded-bike__base, .exploded-bike__part, .exploded-bike__part .bike-image { position: absolute; inset: 0; width: 100%; height: 100%; }
+.exploded-bike__base { filter: drop-shadow(0 20px 25px rgba(0,0,0,.6)); }
+.exploded-bike__part { opacity: 0; transform-origin: center; will-change: transform; }
+.exploded-scene__guides { position: absolute; z-index: 1; top: 56%; left: 50%; width: min(85vw, 76rem); aspect-ratio: 1650 / 865; opacity: 0; translate: -50% -50%; }
+.guide { position: absolute; background: rgba(213,0,28,.45); }
+.guide--h { top: 58%; left: -10%; width: 120%; height: 1px; }
+.guide--v { top: -20%; left: 50%; width: 1px; height: 140%; }
+.guide-circle { position: absolute; top: 43%; width: 30%; aspect-ratio: 1; border: 1px dashed rgba(167,169,172,.35); border-radius: 50%; }
+.guide-circle--one { left: 9%; }
+.guide-circle--two { right: 8%; }
+.exploded-scene__part-label { position: absolute; z-index: 6; padding: .35rem .5rem; border-left: 1px solid var(--ducati-red); color: var(--titanium); background: rgba(9,9,9,.72); font-family: var(--font-mono); font-size: .5rem; letter-spacing: .08em; opacity: 0; transform: translateY(12px); }
+.exploded-scene__part-label--1 { top: 39%; left: 4%; }
+.exploded-scene__part-label--2 { top: 23%; left: 46%; }
+.exploded-scene__part-label--3 { top: 35%; right: 3%; }
+.exploded-scene__part-label--4 { bottom: 21%; left: 5%; }
+.exploded-scene__part-label--5 { bottom: 12%; left: 43%; }
+.exploded-scene__part-label--6 { right: 4%; bottom: 22%; }
+.exploded-scene__part-label--7 { right: 32%; bottom: 6%; }
+.exploded-scene__status { position: absolute; z-index: 5; bottom: 4.2rem; left: var(--page-gutter); display: flex; align-items: center; gap: .65rem; color: var(--titanium); font-size: .48rem; }
+.exploded-scene__status i { width: 1.4rem; height: 1px; background: var(--ducati-red); }
+.exploded-scene__disclaimer { position: absolute; z-index: 5; right: var(--page-gutter); bottom: 4.2rem; max-width: 32rem; color: var(--titanium); font-size: .44rem; text-align: right; }
+
+/* 04 — Engine */
+.engine-scene { color: var(--bone); background: var(--carbon); }
+.engine-scene__pin { background: radial-gradient(circle at 52% 53%, #252222 0, var(--carbon) 43%, var(--obsidian) 90%); }
+.engine-scene__texture { position: absolute; inset: 0; opacity: .5; background: repeating-linear-gradient(95deg, rgba(255,255,255,.012) 0 1px, transparent 1px 4px); }
+.engine-scene__title { position: absolute; z-index: 6; top: 17%; left: var(--page-gutter); font-size: 5.5vw; line-height: .86; }
+.engine-scene__title span { color: var(--ducati-red); }
+.engine-scene__heat { position: absolute; top: 24%; left: 29%; width: 46%; height: 60%; background: radial-gradient(ellipse, rgba(213,0,28,.4), rgba(255,90,31,.07) 45%, transparent 70%); filter: blur(30px); }
+.engine-scene__core { position: absolute; z-index: 3; top: 54%; left: 52%; width: min(42vw, 37rem); aspect-ratio: 1; translate: -50% -50%; }
+.engine-scene__core::before { content: ''; position: absolute; z-index: 2; inset: 0; border: 1px solid rgba(213,0,28,.6); border-radius: 50%; box-shadow: inset 0 0 5rem rgba(9,9,9,.4), 0 0 4rem rgba(213,0,28,.1); }
+.engine-scene__core .bike-image { border-radius: 50%; object-fit: cover; filter: contrast(1.12) saturate(.9); }
+.engine-scene__core-label { position: absolute; right: 0; bottom: -1.8rem; left: 0; color: var(--titanium); font-size: .45rem; text-align: center; }
+.engine-scene__orbit { position: absolute; z-index: 2; top: 54%; left: 52%; width: min(48vw, 42rem); aspect-ratio: 1; border: 1px dashed rgba(167,169,172,.25); border-radius: 50%; translate: -50% -50%; }
+.engine-scene__orbit i { position: absolute; top: 50%; left: -5%; width: 110%; height: 1px; background: rgba(167,169,172,.18); }
+.engine-scene__orbit i:nth-child(2) { transform: rotate(90deg); }
+.engine-scene__orbit span { position: absolute; top: 5%; left: 15%; display: grid; width: 2.6rem; height: 2.6rem; place-items: center; border: 1px solid var(--ducati-red); border-radius: 50%; color: var(--ducati-red); background: var(--obsidian); font-family: var(--font-display); }
+.engine-scene__complete-bike { position: absolute; z-index: 2; inset: 20% 2% 9%; opacity: 0; transform: scale(.9); }
+.engine-scene__stats { position: absolute; z-index: 5; inset: 0; pointer-events: none; }
+.engine-stat { position: absolute; display: flex; flex-direction: column; }
+.engine-stat__label { color: var(--titanium); font-size: .48rem; }
+.engine-stat__readout { display: flex; align-items: flex-end; gap: .4rem; }
+.engine-stat__number { font-family: var(--font-display); font-size: 6.5vw; line-height: .95; letter-spacing: -.02em; }
+.engine-stat__unit { padding-bottom: .5em; color: var(--ducati-red); font-family: var(--font-display); font-size: 1.5vw; text-transform: uppercase; }
+.engine-stat__detail { color: var(--titanium); font-size: .45rem; }
+.engine-stat--power { top: 26%; right: 4%; }
+.engine-stat--torque { bottom: 19%; left: 4%; }
+.engine-stat--displacement { top: 49%; right: 5%; }
+.engine-stat--weight { right: 5%; bottom: 15%; }
+.engine-scene__configuration { position: absolute; z-index: 5; top: 48%; left: 4%; max-width: 15rem; }
+.engine-scene__configuration > span { color: var(--titanium); }
+.engine-scene__configuration strong { display: block; margin: .35rem 0; color: var(--bone); font-family: var(--font-display); font-size: 3.2vw; font-weight: 400; }
+.engine-scene__configuration p { color: var(--titanium); font-size: .63rem; line-height: 1.6; }
+.engine-scene__gearbox { display: block; margin-top: 1rem; padding-top: .75rem; border-top: 1px solid var(--hairline); font-size: .43rem !important; }
+.engine-scene__assembled { position: absolute; z-index: 5; right: 0; bottom: 12%; left: 0; color: var(--bone); font-family: var(--font-display); font-size: 3vw; line-height: .9; text-align: center; opacity: 0; }
+.engine-scene__source { position: absolute; z-index: 7; right: var(--page-gutter); bottom: 3.5rem; left: var(--page-gutter); display: flex; justify-content: space-between; gap: 1rem; color: var(--titanium); font-size: .42rem; }
+.engine-scene__source a { color: var(--bone); text-decoration: underline; text-decoration-color: var(--ducati-red); text-underline-offset: 3px; }

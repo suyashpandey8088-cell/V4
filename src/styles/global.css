@@ -1,0 +1,133 @@
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  background: var(--obsidian);
+  scroll-behavior: smooth;
+  scrollbar-gutter: stable;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  overflow-x: clip;
+  color: var(--bone);
+  background: var(--obsidian);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+body.is-loading { overflow: hidden; }
+button, a { -webkit-tap-highlight-color: transparent; }
+button { color: inherit; font: inherit; }
+a { color: inherit; text-decoration: none; }
+button, a { touch-action: manipulation; }
+button { border: 0; cursor: pointer; }
+img { display: block; max-width: 100%; user-select: none; }
+svg { display: block; }
+::selection { color: var(--bone); background: var(--ducati-red); }
+
+:focus-visible {
+  outline: 2px solid var(--signal);
+  outline-offset: 4px;
+}
+
+.skip-link {
+  position: fixed;
+  top: 0.75rem;
+  left: 0.75rem;
+  z-index: 2000;
+  padding: 0.75rem 1rem;
+  color: var(--obsidian);
+  background: var(--bone);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  transform: translateY(-160%);
+}
+.skip-link:focus { transform: translateY(0); }
+
+#main-content { position: relative; }
+.chapter { position: relative; isolation: isolate; }
+.scene-pin,
+.scene-sticky {
+  position: relative;
+  width: 100%;
+  height: 100svh;
+  min-height: 35rem;
+  overflow: hidden;
+}
+.scene-sticky { position: sticky; top: 0; }
+.bike-image { width: 100%; height: 100%; object-fit: contain; }
+.bike-image--fallback { padding: 8%; background: var(--obsidian); }
+
+.graphic-grid {
+  background-image:
+    linear-gradient(rgba(167,169,172,.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(167,169,172,.07) 1px, transparent 1px);
+  background-size: 5vw 5vw;
+}
+
+.site-grain {
+  position: fixed;
+  z-index: 80;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.055;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.75'/%3E%3C/svg%3E");
+  background-size: 180px 180px;
+  mix-blend-mode: soft-light;
+}
+
+.page-hidden *, .page-hidden *::before, .page-hidden *::after { animation-play-state: paused !important; }
+
+.preloader {
+  position: fixed;
+  z-index: 1500;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem var(--page-gutter);
+  overflow: hidden;
+  color: var(--bone);
+  background: var(--obsidian);
+  transition: opacity 480ms var(--ease-out), visibility 480ms;
+}
+.preloader--leaving { opacity: 0; visibility: hidden; pointer-events: none; }
+.preloader__top, .preloader__meta { display: flex; justify-content: space-between; gap: 1rem; color: var(--titanium); }
+.preloader__center { position: relative; display: flex; align-items: center; justify-content: center; }
+.preloader__index { position: absolute; color: rgba(213,0,28,.14); font-family: var(--font-display); font-size: min(52vw, 40rem); line-height: 1; }
+.preloader__title { position: relative; color: var(--ducati-red); font-family: var(--font-display); font-size: clamp(4rem, 10vw, 10rem); line-height: .85; text-align: center; }
+.preloader__track { height: 2px; margin-top: .75rem; overflow: hidden; background: rgba(242,239,234,.15); }
+.preloader__track span { display: block; width: 100%; height: 100%; background: var(--ducati-red); transform-origin: left; transition: transform 160ms ease; }
+
+.cursor { pointer-events: none; }
+.cursor__ring, .cursor__dot { position: fixed; z-index: 1400; top: 0; left: 0; pointer-events: none; border-radius: 50%; }
+.cursor__ring { width: 2rem; height: 2rem; margin: -1rem 0 0 -1rem; border: 1px solid rgba(213,0,28,.7); transition: width 180ms, height 180ms, margin 180ms, background 180ms; }
+.cursor__dot { width: .28rem; height: .28rem; margin: -.14rem 0 0 -.14rem; background: var(--ducati-red); }
+.cursor--active { width: 3.25rem; height: 3.25rem; margin: -1.625rem 0 0 -1.625rem; background: rgba(213,0,28,.1); }
+
+.aero-scene, .racing-scene, .cockpit-scene { height: 220svh; }
+
+.reduced-motion { scroll-behavior: auto; }
+.reduced-motion *, .reduced-motion *::before, .reduced-motion *::after {
+  scroll-behavior: auto !important;
+  animation-duration: .01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: .01ms !important;
+}
+.reduced-motion .aero-scene, .reduced-motion .racing-scene, .reduced-motion .cockpit-scene { height: auto; }
+.reduced-motion .scene-sticky { position: relative; }
+.reduced-motion .hero-scene__side,
+.reduced-motion .exploded-bike__part,
+.reduced-motion .exploded-scene__labels,
+.reduced-motion .exploded-scene__guides,
+.reduced-motion .engine-scene__complete-bike,
+.reduced-motion .engine-scene__assembled,
+.reduced-motion .aero-scene__front,
+.reduced-motion .racing-scene__rear,
+.reduced-motion .final-scene__side,
+.reduced-motion .final-scene__rear { display: none; }
+.reduced-motion .exploded-scene__title--purpose { display: none; }
+.reduced-motion .aero-scene__statements { top: auto; right: var(--page-gutter); bottom: 12%; left: var(--page-gutter); display: flex; justify-content: space-between; gap: 1rem; }
+.reduced-motion .aero-scene__statement { position: static; font-size: clamp(1rem, 2.8vw, 2.5rem); opacity: 1; }
+.reduced-motion .final-scene__front { display: block; opacity: 1; }

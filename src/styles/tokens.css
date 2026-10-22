@@ -1,0 +1,19 @@
+:root {
+  --ducati-red: #d5001c;
+  --obsidian: #090909;
+  --carbon: #151515;
+  --titanium: #a7a9ac;
+  --bone: #f2efea;
+  --signal: #ff5a1f;
+  --font-display: 'Anton', 'Arial Narrow', sans-serif;
+  --font-heading: 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+  --page-gutter: clamp(1.25rem, 3.5vw, 4rem);
+  --header-height: 5.25rem;
+  --hairline: rgba(242, 239, 234, 0.2);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  color-scheme: dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
